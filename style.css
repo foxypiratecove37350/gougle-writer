@@ -1,0 +1,130 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+html {
+    font-family: "police-sans", sans-serif;
+    color: #121212;
+    background: #fff;
+    animation: fade-in 0.75s;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 64px;
+    background: #fff;
+    border-bottom: 2.5px solid #ebebeb;
+    z-index: 1000;
+    /* box-shadow: 0px 0px 24px #12121280; */
+}
+
+header > ul {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: 100%;
+    height: 100%;
+}
+
+header > ul > li {
+    list-style: none;
+    padding: 15px;
+}
+
+header > ul > li:not(#logo) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header > ul > li > a {
+    color: #5f6368;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header > ul > li img {
+    height: 100%;
+}
+
+.container {
+    padding: 10px;
+}
+
+h1#logo {
+    font-weight: 500;
+    color: #5f6368;
+    font-size: 92px;
+    user-select: none;
+    text-align: center;
+    margin: 50px 0 175px;
+}
+
+h1#logo > img {
+    transform: translateY(calc(92px - 69px));
+}
+
+@keyframes text-1 {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+p.animated-text-1 {
+    font-size: 24px;
+    color: #5f6368;
+    margin-left: 15px;
+    animation: text-1 1.75s;
+    user-select: none;
+    margin-bottom: 50px;
+}
+
+a#use {
+    color: #f1f1f1;
+    background: #4285f4;
+    text-decoration: none;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 31px;
+    user-select: none;
+}
+
+p.animated-text-1 img, a#use img {
+    height: 26px;
+    transform: translateY(8px);
+}
+
+a#use:hover {
+    background: #0a47a9;
+}
+
+a#use:focus {
+    background: #0a47a9;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px #4285f4;
+    outline: none;
+}
+
+a#use:active {
+    background: #87b2f8;
+    box-shadow: none;
+}
